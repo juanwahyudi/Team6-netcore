@@ -21,7 +21,7 @@ namespace AspNetCoreWebApplicationTest.Controllers
             HomeController controller = new HomeController();
             ViewResult result = (ViewResult)controller.Error();
             Assert.Single(result.ViewData);
-            Assert.Equal("We've encountered an error :(", result.ViewData["Message"]);
+            Assert.Equal("We've encountered an error as below :(", result.ViewData["Message"]);
         }
     }
 }
