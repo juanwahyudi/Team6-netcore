@@ -12,7 +12,7 @@ namespace AspNetCoreWebApplicationTest.Controllers
             HomeController controller = new HomeController();
             ViewResult result = (ViewResult) controller.Index();
             Assert.Single(result.ViewData);
-            Assert.Equal("You just created a ASP.Net Core web application for testing purpose!!!", result.ViewData["Message"]);
+            Assert.Equal("", result.ViewData["Message"]);
         }
 
         [Fact]
@@ -21,7 +21,7 @@ namespace AspNetCoreWebApplicationTest.Controllers
             HomeController controller = new HomeController();
             ViewResult result = (ViewResult)controller.Error();
             Assert.Single(result.ViewData);
-            Assert.Equal("We've encountered an error as below :(", result.ViewData["Message"]);
+            Assert.Equal("", result.ViewData["Message"]);
         }
     }
 }
